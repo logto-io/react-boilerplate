@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "license": "UNLICENSED",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev:tsc": "tsc -b -w --preserveWatchOutput",
     "dev:razzle": "razzle start",
     "start": "concurrently -c \"blue,cyan\" \"yarn:dev:tsc\" -k \"yarn:dev:razzle\"",
@@ -22,25 +23,26 @@
     "@babel/core": "^7.14.6",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
-    "@logto/eslint-config": "^0.1.0-rc.10",
-    "@logto/eslint-config-react": "^0.1.0-rc.10",
-    "@logto/ts-config": "^0.1.0-rc.10",
-    "@logto/ts-config-react": "^0.1.0-rc.10",
+    "@silverhand/eslint-config": "^0.2.2",
+    "@silverhand/eslint-config-react": "^0.2.2",
+    "@silverhand/ts-config": "^0.2.2",
+    "@silverhand/ts-config-react": "^0.2.2",
     "@types/jest": "^26.0.24",
     "@types/react": "^17.0.14",
     "@types/react-dom": "^17.0.9",
     "@types/react-router-dom": "^5.1.8",
     "@types/webpack-env": "^1.16.2",
-    "babel-preset-razzle": "4.0.5",
+    "babel-preset-razzle": "4.1.0",
     "concurrently": "^6.2.0",
-    "eslint": "^7.30.0",
+    "eslint": "^7.32.0",
     "eslint-formatter-pretty": "^4.1.0",
     "html-webpack-plugin": "^4.5.2",
     "husky": "^7.0.1",
     "lint-staged": ">=10",
     "mini-css-extract-plugin": "^0.9.0",
+    "postcss": "^8.3.6",
     "prettier": "^2.3.2",
-    "razzle": "^4.0.5",
+    "razzle": "^4.1.0",
     "razzle-dev-utils": "^4.0.5",
     "razzle-plugin-scss": "^4.0.5",
     "stylelint": "^13.13.1",
@@ -49,12 +51,12 @@
     "webpack-dev-server": "^3.11.2"
   },
   "eslintConfig": {
-    "extends": "@logto/react"
+    "extends": "@silverhand/react"
   },
   "stylelint": {
-    "extends": "@logto/eslint-config-react/.stylelintrc"
+    "extends": "@silverhand/eslint-config-react/.stylelintrc"
   },
-  "prettier": "@logto/eslint-config/.prettierrc",
+  "prettier": "@silverhand/eslint-config/.prettierrc",
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
